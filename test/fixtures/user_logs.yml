@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  UID: 1
+  Activity_name: MyString
+  time: 2015-10-12 08:04:17
+
+two:
+  UID: 1
+  Activity_name: MyString
+  time: 2015-10-12 08:04:17
