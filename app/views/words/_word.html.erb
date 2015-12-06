@@ -7,11 +7,11 @@
 <% if word.bookmark == true %>
   <div class="col-md-2">
     <%#= link_to image_tag("bookmark.png", id: "bookmark-img"), category_word_path(id: word.id, action: "set_no_bookmark") %>
-    <input type="image" id= "word-<%= word.id %>", src="/assets/bookmark.png" style="height: 20px; width: 20px; border-style: none" onclick="editBookmark(<%= word.id %>, 1, <%= word.category_id %>)"/>
+    <input type="image" id= "word-<%= word.id %>", src="/assets/bookmark.png" style="height: 20px; width: 20px; border-style: none" name = "1" onclick="editBookmark(<%= word.id %>, this.name, <%= word.category_id %>)"/>
   </div>
 <% else %>
   <div class="col-md-2">
     <%#= link_to image_tag("no-bookmark.png", id: "no-bookmark-img"), category_word_path(id: word.id, action: "set_bookmark") %>
-    <input type="image" id= "word-<%= word.id %>" src="/assets/no-bookmark.png" style="height: 20px; width: 20px; border-style: none" onclick="editBookmark(<%= word.id %>, 2, <%= word.category_id %>)"/>
+    <input type="image" id= "word-<%= word.id %>" src="/assets/no-bookmark.png" style="height: 20px; width: 20px; border-style: none" name = "2" onclick="editBookmark(<%= word.id %>, this.name, <%= word.category_id %>)"/>
   </div>
 <% end  %>

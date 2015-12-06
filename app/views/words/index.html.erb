@@ -17,9 +17,15 @@
       success: function(data){
         if (data.message = "ok"){
           if (action == 1)
+          {
             $(id).attr("src", "/assets/no-bookmark.png");
+            $(id).attr("name", "2");
+          }
           else if (action == 2)
+          {
             $(id).attr("src", "/assets/bookmark.png");
+            $(id).attr("name", "1");
+          }
         }
       }
     });
@@ -30,7 +36,7 @@
   <%= form_tag category_words_path(@category.id),
     method: :get, class: "form-inline", id: "filter-form" do %>    
     <div class="form-group">
-      <% ["全部", "ブックマーク", "ブックマークしません"].each do |key| %>
+      <% ["全部", "ブックマーク", "ブックマークがない"].each do |key| %>
         <label>
           <% if @filter_state == key %>
             <%= radio_button_tag :filter_state, key, true, class: "form-control" %>
