@@ -7,7 +7,7 @@ class WordsController < ApplicationController
       @words = @category.words.all_word @category.id
     elsif @filter_state == "ブックマーク"
       @words = @category.words.bookmark_word @category.id
-    elsif @filter_state == "ブックマークしません"
+    elsif @filter_state == "ブックマークがない"
       @words = @category.words.no_bookmark_word @category.id
     end  
     # @words = @category.words.send(@filter_state, current_user, @category)
