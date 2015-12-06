@@ -73,10 +73,9 @@ ActiveRecord::Schema.define(version: 20151204164202) do
 
   create_table "study_logs", force: :cascade do |t|
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "content"
-    t.integer  "learned_word"
   end
 
   create_table "tests", force: :cascade do |t|
